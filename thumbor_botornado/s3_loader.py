@@ -8,7 +8,6 @@ def load(context, url, callback):
     #bucket_name, object_name = url.split("/", 1)
     bucket_name = "uggozi.dev"
     object_name = url
-    print "bucket_name: %s, object_name: %s" %(bucket_name, object_name)
     connection = AsyncS3Connection() # load credentials from environment
     bucket = AsyncBucket(connection, bucket_name)
     key = AsyncKey(bucket, object_name)
