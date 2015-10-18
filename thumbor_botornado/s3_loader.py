@@ -6,7 +6,7 @@ from tornado.concurrent import return_future
 @return_future
 def load(context, url, callback):
     #bucket_name, object_name = url.split("/", 1)
-    bucket_name = "uggozi.dev"
+    bucket_name = "uggozi.prod"
     object_name = url
     connection = AsyncS3Connection() # load credentials from environment
     bucket = AsyncBucket(connection, bucket_name)
